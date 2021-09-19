@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="ITMO, WEB, HTML, LAB, ILYA, EVDOKIMOV">
     <meta name="description" content="Лабы по веб-программированию">
-    <title>Евдокимов Илья - M33041</title>
+    <title>Илья Евдокимов - M33041</title>
 </head>
 <body>
     <header>
@@ -17,20 +17,20 @@
         <h1>Я Илья Евдокимов</h1>
         <section>
             <h2>Я студент</h2>
-            <p>Учусь в мегауниверситете ИТМО в мегагруппе M33041 (M - значит мега) и борюсь с комплексами,
+            <p>Учусь в мегауниверситете <strong>ИТМО</strong> в мегагруппе <b>M33041</b> (M - значит мега) и борюсь с комплексами,
             добавляя везде приставку "мега-".</p>
         </section>
         <section>
             <h2>Я крутой</h2>
             <p>Если не верите, предлагаю ознакомиться со списком моих заслуг:</p>
             <ul>
-                <li>Я создал этот крутой сайт</li>
+                <li>Я создал <ins>этот крутой сайт</ins></li>
                 <br>
                 <li>Еще я создал <a target="_blank" href="https://eilyy.github.io/todo-list-react">туду лист на реакте</a></li>
                 <li>
                     <dl>
                         <dt>Знаю английский алфавит</dt>
-                        <dd>Алфавит английского языка основан на латинском алфавите и состоит из 26 букв.</dd>
+                        <dd><i>Алфавит английского языка основан на латинском алфавите и состоит из 26 букв.</i></dd>
                     </dl>
                 </li>
             </ul>
@@ -39,7 +39,7 @@
             <h2>Я люблю добротное кино</h2>
             <article>
                 <h4>Рецензия на "Суперфорсаж!":</h4>
-                <p>Очередной калоподобный фильмец от создателей «Вампирского засоса» и «Знакомства со спартанцами» - «Суперфорсаж», вобравший в себя все «лучшее» из знаменитой франшизы.
+                <p>Очередной <del>калоподобный</del> фильмец от создателей «Вампирского засоса» и «Знакомства со спартанцами» - «Суперфорсаж», вобравший в себя все «лучшее» из знаменитой франшизы.
                     История пародийного фильма до боли напомнит зрителю о славных временах первого «Форсажа», когда Уокер познакомился с Торетто и его семьей, о том, как во франшизе появился Скала Джонсон и что творилось в последующих фильмах (тут я имею ввиду сцену с ограблением и гигантским сейфом).
                     Вот честно, не знаю, что побудило посмотреть этот фильм, но просто взял и включил. И Посмотрел.
                     Господи! Я понимаю, что это фильм-пародия, но как?! Как можно снимать такую ересь, такое дерьмо. Не побоюсь этого слова.
@@ -71,33 +71,33 @@
 
                     const App = (props) => {
                     useEffect(() => {
-                    if (localStorage['lang'] === undefined) {
-                    localStorage['lang'] = 'English';
-                    }
-                    if (localStorage['theme'] === undefined) {
-                    localStorage['theme'] = 'Light';
-                    }
+                        if (localStorage['lang'] === undefined) {
+                            localStorage['lang'] = 'English';
+                        }
+                        if (localStorage['theme'] === undefined) {
+                            localStorage['theme'] = 'Light';
+                        }
                     }, [])
 
                     return (
-                    &lt;div className={props.theme === 'Light' ? "app" : "app app_dark"}>
-                    &lt;AppHeader/>
-                    &lt;Route exact path="/todo-list-react">
-                        &lt;Container>
-                            &lt;NewTaskForm/>
-                            &lt;Filter/>
-                            &lt;TasksList/>
-                        &lt;/Container>
-                    &lt;/Route>
-                    &lt;Route path="/todo-list-react/contacts" component={Contacts} title="Contacts"/>
-                    &lt;/div>
+                        &lt;div className={props.theme === 'Light' ? "app" : "app app_dark"}>
+                            &lt;AppHeader/>
+                            &lt;Route exact path="/todo-list-react">
+                                &lt;Container>
+                                    &lt;NewTaskForm/>
+                                    &lt;Filter/>
+                                    &lt;TasksList/>
+                                &lt;/Container>
+                            &lt;/Route>
+                            &lt;Route path="/todo-list-react/contacts" component={Contacts} title="Contacts"/>
+                        &lt;/div>
                     );
                     }
 
                     const mapStateToProps = (state) => {
-                    return {
-                    theme: state.theme
-                    }
+                        return {
+                            theme: state.theme
+                        }
                     }
 
                     export default connect(mapStateToProps)(App);
