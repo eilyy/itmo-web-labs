@@ -1,5 +1,5 @@
 # itmo-web-labs
-stylish, fashionable, youth
+Евдокимов Илья Алексеевич
 
 ## LINK:
 https://eilyy.github.io/itmo-web-labs/index.html
