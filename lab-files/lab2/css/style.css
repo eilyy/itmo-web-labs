@@ -130,9 +130,11 @@ ins {
 
 code {
     font-family: 'Fira Code', sans-serif;
+    line-height: 18px;
     color: #383f9b;
 }
 
 .geese {
     font-family: 'Courier', monospace;
+    overflow: hidden;
 }
