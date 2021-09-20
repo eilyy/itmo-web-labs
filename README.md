@@ -1,6 +1,11 @@
 # itmo-web-labs
-Евдокимов Илья Алексеевич
-M33041
+
+### Лабораторные работы по Web-программированию
+
+## INFO
+### ITMO
+### M33041
+### Евдокимов Илья Алексеевич
 
 ## LINK:
-https://eilyy.github.io/itmo-web-labs/index.html
+### https://eilyy.github.io/itmo-web-labs/index.html
