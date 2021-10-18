@@ -1,17 +1,21 @@
 body {
+    width: 100%;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 100px;
+    width: calc(100vw - 200px);
     height: 80px;
     background-color: #FFFFFF;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
     z-index: 10;
+    padding: 0 100px;
 }
 
 footer {
@@ -19,13 +23,40 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 30px 100px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 10;
 }
 
 a {
     color: #0090ff;
+}
+
+p {
+    font-size: 12px;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.super-fast {
+    min-width: 0;
+}
+
+img {
+    width: 300px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+}
+
+h3 {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
 li {
@@ -42,8 +73,18 @@ i {
 }
 
 dl {
+    float: right;
     display: inline-block;
     vertical-align: top;
+}
+
+dl i {
+    font-size: 11px;
+}
+
+li:last-child {
+    display: flex;
+    justify-content: flex-start;
 }
 
 li:before {
@@ -81,11 +122,18 @@ ins {
     background-color: #d6ff9a;
 }
 
+.pre-code {
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    padding: 20px;
+}
+
 code {
+    width: 100%;
     font-family: 'Fira Code', monospace;
     letter-spacing: 1px;
     line-height: 18px;
-    color: #383f9b;
+    color: #9972c5;
 }
 
 .page-block {
@@ -99,8 +147,12 @@ code {
     border: none;
 }
 
+.nav {
+    width: auto;
+}
+
 .nav__link {
-    padding: 0 30px;
+    margin: 0 30px;
     text-decoration: none;
     color: #444444;
     transition: linear 0.1s;
@@ -108,20 +160,60 @@ code {
 }
 
 .nav__link:first-child {
-    padding: 0 0 30px;
+    margin: 0 30px 0 0;
 }
 
 .nav__link:hover {
+    transition: linear 0.2s;
     color: #0090ff;
+    border-color: #0090ff;
 }
 
 .nav__link:active {
     color: #0061ab;
 }
 
+.nav__link_current {
+    color: #0061ab;
+    border-bottom: dashed 2px #0061ab;
+    box-sizing: border-box;
+}
+
+.icon-wrapper {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.icon {
+    display: inline-block;
+    font-size: 32px;
+    color: #444444;
+    transition: linear 0.1s;
+    text-decoration: none;
+}
+
+.icon:hover {
+    font-size: 40px;
+    color: #0090ff;
+}
+
+.icon:active {
+    color: #0061ab;
+}
+
+.timer {
+    color: #41a0e8;
+}
+
 .page-header {
+    margin-top: 80px;
     font-size: 32px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .block-header {
@@ -138,4 +230,79 @@ code {
 .geese {
     font-family: 'Courier', monospace;
     overflow: hidden;
+}
+
+.table {
+    display: grid;
+    grid-template-rows: 70px 70px 70px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+.table__row {
+    display: grid;
+    grid-template-columns: minmax(85px, 1fr) minmax(85px, 1fr) minmax(85px, 1fr) minmax(85px, 1fr) minmax(85px, 1fr);
+    border-bottom: solid 4px #e1e1e1;
+    border-radius: 10px;
+}
+
+.table__row:nth-child(odd) {
+    background-color: #eaeaea;
+}
+
+.table__row:last-child {
+    border-bottom: none;
+}
+
+.table__cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.table__header {
+    vertical-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+    body {
+        font-size: 12px;
+    }
+
+    .page-block {
+        padding: 30px 30px;
+        background-color: #e1e1e1;
+        border-bottom: dashed 5px #ffffff;
+        z-index: 0;
+    }
+
+    pre {
+        overflow: scroll;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100vw - 60px);
+        height: 60px;
+        background-color: #FFFFFF;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        padding: 0 30px;
+    }
+
+    footer {
+        padding: 30px 30px;
+    }
+
+    .page-header {
+        margin-top: 60px;
+    }
 }
