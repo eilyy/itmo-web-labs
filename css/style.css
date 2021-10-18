@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body {
     width: 100%;
     font-family: 'Roboto', sans-serif;
@@ -38,13 +41,13 @@ p {
 
 article {
     display: flex;
-    flex-wrap: wrap;
     align-items: flex-start;
     gap: 30px;
 }
 
 .super-fast {
     min-width: 0;
+    text-indent: 20px;
 }
 
 img {
@@ -214,12 +217,14 @@ code {
     font-size: 32px;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .block-header {
     font-size: 24px;
     font-weight: 500;
     padding-bottom: 20px;
+    text-align: center;
 }
 
 .text {
@@ -238,6 +243,7 @@ code {
     background-color: #eeeeee;
     border-radius: 10px;
     overflow: scroll;
+    overflow-y: hidden;
 }
 
 .table__row {
@@ -268,9 +274,73 @@ code {
     font-weight: bold;
 }
 
+.food-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.food-item {
+    transition: 0.2s;
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.spaghetti {
+    background: url("https://www.maggi.ru/data/images/recept/img640x500/recept_15148_m9of.jpg") 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.pizza {
+    background: url("https://s1.eda.ru/StaticContent/Photos/120131085053/171027192707/p_O.jpg") 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.sushi {
+    background: url("https://www.tokyo-city.ru/templates/img/menu/txt_cat2/400_300_sushi-min.png") 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.ramen {
+    background: url("https://the-challenger.ru/wp-content/uploads/2018/05/shutterstock_379968754-800x577.jpg") 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.food-item__name {
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.2s;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.food-item__name:hover {
+    backdrop-filter: blur(5px);
+    transition: 0.2s;
+}
+
+.food-item:hover .food-item__name {
+    opacity: 1;
+    transition: 0.2s;
+}
+
 @media (max-width: 1200px) {
     body {
         font-size: 12px;
+    }
+
+    article {
+        flex-wrap: wrap;
     }
 
     .page-block {
@@ -282,6 +352,7 @@ code {
 
     pre {
         overflow: scroll;
+        overflow-y: hidden;
     }
 
     header {
@@ -304,5 +375,13 @@ code {
 
     .page-header {
         margin-top: 60px;
+    }
+
+    .nav__link {
+        margin: 0 15px;
+    }
+
+    .nav__link:first-child {
+        margin: 0 15px 0 0;
     }
 }
