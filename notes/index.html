@@ -38,10 +38,10 @@
     </header>
     <main class="notes">
         <h1 class="page-header page-block">Заметки</h1>
-        <form class="notes__input input-group mb-3">
-            <input type="text" class="form-control" placeholder="Новая заметка" aria-label="Recipient's username"
+        <form id="notes-form" class="notes__input input-group mb-3">
+            <input type="text" class="form-control" placeholder="Новая заметка" aria-label="New Note"
                    aria-describedby="button-addon2" />
-            <button class="notes__btn btn btn-outline-primary" type="button" id="button-addon2" data-mdb-ripple-color="dark">
+            <button class="notes__btn btn btn-outline-primary" type="submit" id="button-addon2" form="notes-form" data-mdb-ripple-color="dark">
                 Создать
             </button>
         </form>
