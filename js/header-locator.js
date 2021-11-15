@@ -5,3 +5,6 @@ if(document.location.pathname === '/itmo-web-labs/') {
 if(document.location.pathname === '/itmo-web-labs/contacts/') {
     navMenu.querySelector('#contacts-btn').classList.add('nav__link_current')
 }
+if(document.location.pathname === '/itmo-web-labs/schedule/') {
+    navMenu.querySelector('#schedule-btn').classList.add('nav__link_current')
+}
