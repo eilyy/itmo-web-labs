@@ -342,6 +342,56 @@ h1 {
     transition: 0.2s;
 }
 
+.spinner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.spinner {
+    font-size: 40px;
+}
+
+.error {
+    background-color: #ffffff;
+    margin: 0 auto 30px;
+    padding: 40px;
+    border-radius: 10px;
+    color: #c21212;
+    max-width: 300px;
+    text-align: center;
+}
+
+.comment {
+    background-color: #ffffff;
+    margin: 25px 0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.comment__author {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: dashed 2px #e1e1e1;
+    color: #6c789d;
+}
+
+.comment__name {
+    font-weight: 700;
+}
+
+.comment__content {
+    padding-top: 15px;
+}
+
+#map {
+    height: 360px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.05);
+}
+
 @media (max-width: 1200px) {
     body {
         font-size: 12px;
