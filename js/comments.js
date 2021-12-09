@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     const commentsBlock = document.querySelector('#comments_section');
 
     const randomId = Math.floor(Math.random() * 100);
-    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${101}/comments`);
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${randomId}/comments`);
 
     document.querySelector('.spinner-wrapper').style.display = 'none';
 
