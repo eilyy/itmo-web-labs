@@ -287,9 +287,11 @@ h1 {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 30px;
 }
 
 .food-item {
+    margin: 0 auto;
     transition: 0.2s;
     width: 250px;
     height: 250px;
