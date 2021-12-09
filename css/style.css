@@ -284,10 +284,9 @@ h1 {
 
 .food-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 80px;
 }
 
 .food-item {
