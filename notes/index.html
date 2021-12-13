@@ -43,17 +43,14 @@
     </header>
     <main class="notes">
         <h1 class="page-header page-block">Заметки</h1>
-        <form id="notes-form" class="notes__input input-group mb-3">
-            <input type="text" class="form-control" placeholder="Новая заметка" aria-label="New Note"
-                   aria-describedby="button-addon2" />
-            <button class="notes__btn btn btn-outline-primary" type="submit" id="button-addon2" form="notes-form" data-mdb-ripple-color="dark">
+        <form id="notes-form" class="notes__form">
+            <input type="text" class="notes__input" placeholder="Новая заметка" aria-label="New Note"
+                   aria-describedby="button-addon2"/>
+            <button class="notes__btn" type="submit" id="button-addon2" form="notes-form" disabled>
                 Создать
             </button>
         </form>
         <div class="notes__list">
-            <div class="note-item">
-                Пример заметки
-            </div>
         </div>
     </main>
 </body>
